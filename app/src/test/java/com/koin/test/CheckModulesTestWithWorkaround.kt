@@ -28,7 +28,8 @@ class CheckModulesTestWithWorkaround : KoinTest {
         checkModules(
             allowedMocks = listOf(
                 Boolean::class,
-                ParentClass::class
+                ParentClass.ChildClass::class,
+                androidx.lifecycle.SavedStateHandle::class
             )
         ) {
             androidContext(mockk())
